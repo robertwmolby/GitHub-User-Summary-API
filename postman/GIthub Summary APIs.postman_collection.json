@@ -27,6 +27,25 @@
 			"response": []
 		},
 		{
+			"name": "Successful Github Summary API MultiPage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/userSummary/v1/octocat",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"userSummary",
+						"v1",
+						"octocat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Successful Github Summary API Invalid Request",
 			"request": {
 				"method": "GET",
