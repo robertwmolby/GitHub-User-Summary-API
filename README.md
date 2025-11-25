@@ -17,7 +17,7 @@ The driving design considerations when deciding between libraries and components
 ## Design
 This is a spring boot application with a single restful endpoint.  Core classes within it:
 - UserSummaryController.java - handles the restful endpoint
-- UserSummaryService.java - handles the business logic for the endpoint.  Calls GitHubApiClient to fetch data
+- UserSummaryService.java - handles the business logic for the endpoint.  Calls GitHubApiClient to fetch data.  Falls back to GitHubUserSummaryCache contents if an exception occurs while attempting to fetch the information via the GitHubApiClient.
 - GitHubApiClient.java - handles the API calls to github.  Uses RestClient.  Note that logic exists in this for repository fetches to address that GitHub technically does page on these requests and could return multiple pages of results.
 
 Beyond simply the general springboot/service handler, the following is included:
@@ -37,7 +37,7 @@ The assumptions for this appliction are as follows:
 
 ## Libraries
 In general standard springboot libraries and classes are used.  Specifically:
-### SpringBoot LIbraries
+### SpringBoot Libraries
 - Spring Boot Web (basic api construction)
 - RestClient (API fetches).  Used over WebClient since there is no need for non-blocking aspect and performance.  Other alternative (personal preferred) would be Feign but that does bring in Spring Cloud dependencies.
 - Validation.  Used for controller request validation.
