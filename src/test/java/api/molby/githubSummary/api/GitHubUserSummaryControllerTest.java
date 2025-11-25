@@ -85,7 +85,7 @@ class GithubUserSummaryControllerTest {
                 .andExpect(jsonPath("$.repos[0].name").value(REPO_NAME_1))
                 .andExpect(jsonPath("$.repos[0].url").value(REPO_URL_1))
                 .andExpect(jsonPath("$.repos[1].name").value(REPO_NAME_2))
-                .andExpect(jsonPath("$.repos[2].url").value(REPO_URL_2));
+                .andExpect(jsonPath("$.repos[1].url").value(REPO_URL_2));
     }
 
     @Test
