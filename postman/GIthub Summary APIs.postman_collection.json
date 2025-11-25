@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "42c46524-1a01-478c-8d0c-5199ef8260b3",
+		"name": "GIthub Summary APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2763293",
+		"_collection_link": "https://speeding-zodiac-369449.postman.co/workspace/Weather~8b47c36a-87c5-41e0-b2a0-222f13e60165/collection/2763293-42c46524-1a01-478c-8d0c-5199ef8260b3?action=share&source=collection_link&creator=2763293"
+	},
+	"item": [
+		{
+			"name": "Successful Github Summary API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/userSummary/v1/octocat",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"userSummary",
+						"v1",
+						"octocat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Successful Github Summary API Invalid Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/userSummary/v1/-octocat",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"userSummary",
+						"v1",
+						"-octocat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid User Github Summary API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/userSummary/v1/octocatISNOTAREALUSER",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"userSummary",
+						"v1",
+						"octocatISNOTAREALUSER"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
