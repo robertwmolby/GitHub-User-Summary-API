@@ -30,7 +30,7 @@ In order to conform to the desired response format, the fields needed to be mapp
   - This is done by using an OffsetDateTime in conjunction with formatters
 - repos[] is derived from the user’s repository list, exposing only name and the GitHub repo url.
 
-This mapping logic is encapsulated in DTOs and mapping code so the controller layer stays clean.
+This mapping logic leverages usage of the builder pattern for clarity and eas of support.
 
 Note that only fields that are required in response are mapped inside of the GitHub access dtos.  There are a large number of other fields returned by the github api that are not needed for this application.
 
