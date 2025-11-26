@@ -90,8 +90,8 @@ class GithubUserSummaryControllerTest {
 
     @Test
     void getUserSummary_invalidUsername_returnsBadRequest() throws Exception {
-        String userName = "octocat";
+        String userName = "~octocat";
         GitHubUserSummaryDTO gitHubUserSummaryDTO = GitHubUserSummaryDTO.builder().userName(userName).build();
-        mockMvc.perform(get("/userSummary/v1/{username}", userName)).andExpect(status().isOk());
+        mockMvc.perform(get("/userSummary/v1/{username}", userName)).andExpect(status().isBadRequest());
     }
 }
