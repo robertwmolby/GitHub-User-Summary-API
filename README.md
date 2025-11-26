@@ -49,7 +49,7 @@ In general standard springboot libraries and classes are used.  Specifically:
 - Lombok for pojo handling.  Given pojos in this library are immutable Java records could be used but Lombok provides some additional options if later needed
 - Caffeine for caching.  Simple, in memory cache.  Does have limitations since it is in memory but unless there is a large nuymber of potential users in the request this is a non-issue.  Will configure time based eviction for purposes of this project.  
 - Junit5 for unit tests
-- Lombok for mocking during unit tests
+- Mockito for mocking during unit tests
 
 ## Structure
 Although not heavily pertinent due to the small size, general package structure will be domain based with the exception of cross-cutting concerns.  
